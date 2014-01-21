@@ -13,4 +13,8 @@ class Beer < ActiveRecord::Base
     "#{(k/self.ratings.count).round(1)}"
 =end
   end
+
+  def to_s
+    "#{name}, #{brewery.name}"
+  end
 end
