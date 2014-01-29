@@ -12,10 +12,12 @@
       <%= link_to 'breweries',breweries_path %>
       <%= link_to 'beers',beers_path %>
       <%= link_to 'ratings', ratings_path %>
-      <%= link_to 'users', users_path %> |
+      <%= link_to 'users', users_path %>
+      <%= link_to 'clubs', beerclubs_path %> |
       <% if not current_user.nil? %>
           <%= current_user.username %>
           <%= link_to 'rate a beer', new_rating_path %>
+          <%= link_to 'join a club', beerclubs_path %>
           <%= link_to 'signout', signout_path, method: :delete %>
       <% else %>
           <%= link_to 'signin', signin_path %>
