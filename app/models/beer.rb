@@ -4,6 +4,8 @@ class Beer < ActiveRecord::Base
   belongs_to :brewery
   has_many :ratings, :dependent => :destroy
 
+  validates :name, presence: true
+
  # def average_rating
   #"#{(ratings.inject(0.0) { |sum ,rating |sum+rating.score }/ratings.count).round(1)}"
   #"#{ratings.average("score").round(1)}"
