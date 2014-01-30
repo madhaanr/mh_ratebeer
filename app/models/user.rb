@@ -5,10 +5,16 @@ class User < ActiveRecord::Base
 
   validates :username, uniqueness: true,
                        length: {minimum: 3,maximum:15}
-  validates :password, presence: true, length: {minimum: 4, }, format: {with:/[A-Z]/, with:/[0-9]/ }
+  validates :password, presence: true, length: {minimum: 4, }, format: {with:/[A-Z]+/, with:/[0-9]+/}
+
   has_many :ratings, dependent: :destroy
   has_many :beers, through: :ratings
-  has_many :memberships
+
+  has_many :memberships, dependent: :destroy
   has_many :beerclubs, through: :memberships
+
+  def to_s
+    "#{username}"
+  end
 
 end

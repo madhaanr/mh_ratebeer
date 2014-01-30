@@ -14,6 +14,14 @@
   <strong>City:</strong>
   <%= @beerclub.city %>
 </p>
+<p><strong>Members:</strong></p>
+<ul>
+  <% @membership.each do |membership| %>
+     <%if membership.beerclub_id==@beerclub.id %>
+        <li><%= membership.user %></li>
+     <% end %>
+  <% end %>
+</ul>
 
 
 <%= link_to 'Edit', edit_beerclub_path(@beerclub) %> |

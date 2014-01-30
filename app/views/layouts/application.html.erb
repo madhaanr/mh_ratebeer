@@ -17,7 +17,7 @@
       <% if not current_user.nil? %>
           <%= current_user.username %>
           <%= link_to 'rate a beer', new_rating_path %>
-          <%= link_to 'join a club', beerclubs_path %>
+          <%= link_to 'join a club', new_membership_path %>
           <%= link_to 'signout', signout_path, method: :delete %>
       <% else %>
           <%= link_to 'signin', signin_path %>

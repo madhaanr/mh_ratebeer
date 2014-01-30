@@ -15,10 +15,13 @@ class MembershipsController < ApplicationController
   # GET /memberships/new
   def new
     @membership = Membership.new
+    @beerclubs = Beerclub.all
   end
 
   # GET /memberships/1/edit
   def edit
+    @membership = Membership.new
+    @beerclubs = Beerclub.all
   end
 
   # POST /memberships
@@ -69,6 +72,6 @@ class MembershipsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def membership_params
-      params.require(:membership).permit(:user_id, :beer_club_id)
+      params.require(:membership).permit(:user_id, :beerclub_id)
     end
 end

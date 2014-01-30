@@ -11,14 +11,22 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.number_field :user_id %>
-  </div>
-  <div class="field">
-    <%= f.label :beer_club_id %><br>
-    <%= f.number_field :beer_club_id %>
-  </div>
+  <% if @membership.new_record? %>
+    <div class="field">
+      <%= f.label :beerclub_id %><br>
+      <%= f.select :beerclub_id, options_from_collection_for_select(@beerclubs, :id, :name) %>
+      <%= f.hidden_field :user_id, value: current_user.id %>
+    </div>
+  <% else %>
+    <div class="field">
+      <%= f.label :user_id %><br>
+      <%= f.number_field :user_id %>
+    </div>
+    <div class="field">
+      <%= f.label :beerclub_id %><br>
+      <%= f.number_field :beerclub_id %>
+    </div>
+  <% end %>
   <div class="actions">
     <%= f.submit %>
   </div>

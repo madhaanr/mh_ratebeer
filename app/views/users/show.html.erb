@@ -16,6 +16,15 @@
     <% end %>
 </ul>
 
+<p><strong>member of:</strong></p>
+<ul>
+  <% @membership.each do |membership| %>
+      <%if membership.user_id==@user.id %>
+          <li><%= membership.beerclub %></li>
+      <% end %>
+  <% end %>
+</ul>
+
 <% if @user == current_user %>
     <%= link_to 'Destroy', current_user, method: :delete, data: { confirm: 'Are you sure?' } %> |
     <%= link_to 'Edit', edit_user_path(@user) %> |
