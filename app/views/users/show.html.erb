@@ -2,15 +2,22 @@
 
 <h1> <%= @user.username %> </h1>
 <p>has made <%= @user.ratings.count %> ratings</p>
-<% if not @user.ratings.empty? %>
-<p>average rating <%= @user.average_rating %></p>
+    <% if not @user.ratings.empty? %>
+    <p>average rating <%= @user.average_rating %></p>
 <% end %>
 <p><strong>ratings</strong></p>
 <ul>
-<% @user.ratings.each do |rating|%>
-<li><%= rating %> <%= link_to 'delete', rating, :method => :delete, data: {confirm: 'Are you sure?'} %></li>
-<% end %>
+    <% @user.ratings.each do |rating|%>
+        <li><%= rating %>
+          <% if @user == current_user %>
+            <%= link_to 'delete', rating, :method => :delete, data: {confirm: 'Are you sure?'} %>
+          <% end %>
+        </li>
+    <% end %>
 </ul>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
+<% if @user == current_user %>
+    <%= link_to 'Destroy', current_user, method: :delete, data: { confirm: 'Are you sure?' } %> |
+    <%= link_to 'Edit', edit_user_path(@user) %> |
+<% end %>
 <%= link_to 'Back', users_path %>
