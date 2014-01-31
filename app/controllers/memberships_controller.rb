@@ -15,6 +15,16 @@ class MembershipsController < ApplicationController
   # GET /memberships/new
   def new
     @membership = Membership.new
+=begin
+    @beerc = Beerclub.all
+    @beerc.each do |club|
+      @membership.each do |member|
+        if member.beerclub_id != club.id
+          @beerclubs += club
+        end
+      end
+    end
+=end
     @beerclubs = Beerclub.all
   end
 
@@ -37,6 +47,7 @@ class MembershipsController < ApplicationController
         format.html { render action: 'new' }
         format.json { render json: @membership.errors, status: :unprocessable_entity }
       end
+
     end
   end
 

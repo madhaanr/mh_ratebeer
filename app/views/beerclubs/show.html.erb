@@ -18,7 +18,7 @@
 <ul>
   <% @membership.each do |membership| %>
      <%if membership.beerclub_id==@beerclub.id %>
-        <li><%= membership.user %></li>
+        <li><%= link_to membership.user, user_path(membership.user_id) %></li>
      <% end %>
   <% end %>
 </ul>

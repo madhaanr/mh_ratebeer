@@ -5,6 +5,15 @@
     <% if not @user.ratings.empty? %>
     <p>average rating <%= @user.average_rating %></p>
 <% end %>
+
+<p><strong>member of</strong>
+<% @membership.each do |membership| %>
+  <%if membership.user_id==@user.id %>
+      <%= link_to membership.beerclub, beerclub_path(membership.beerclub)%>
+  <% end %>
+<% end %>
+</p>
+
 <p><strong>ratings</strong></p>
 <ul>
     <% @user.ratings.each do |rating|%>
@@ -14,15 +23,6 @@
           <% end %>
         </li>
     <% end %>
-</ul>
-
-<p><strong>member of:</strong></p>
-<ul>
-  <% @membership.each do |membership| %>
-      <%if membership.user_id==@user.id %>
-          <li><%= membership.beerclub %></li>
-      <% end %>
-  <% end %>
 </ul>
 
 <% if @user == current_user %>
