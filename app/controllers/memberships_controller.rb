@@ -15,17 +15,22 @@ class MembershipsController < ApplicationController
   # GET /memberships/new
   def new
     @membership = Membership.new
+    @clubs = Beerclub.all.reject{ |b| b.members.include? current_user }
+    #@beerclubs = Beerclub.all
 =begin
-    @beerc = Beerclub.all
-    @beerc.each do |club|
-      @membership.each do |member|
-        if member.beerclub_id != club.id
-          @beerclubs += club
+    @memberships = Membership.all
+    @beerc=Beerclub.all
+    @beerclubs=[]
+    @memberships.each do |m|
+      @beerc.each do |b|
+        if m.user_id==current_user.id and m.beerclub_id==b.id
+          @beerclubs
+        else
+          @beerclubs << b
         end
       end
     end
 =end
-    @beerclubs = Beerclub.all
   end
 
   # GET /memberships/1/edit
@@ -38,12 +43,14 @@ class MembershipsController < ApplicationController
   # POST /memberships.json
   def create
     @membership = Membership.new(membership_params)
+    @membership.user = current_user
 
     respond_to do |format|
       if @membership.save
         format.html { redirect_to @membership, notice: 'Membership was successfully created.' }
         format.json { render action: 'show', status: :created, location: @membership }
       else
+        @clubs = Beerclub.all.reject{ |b| b.members.include? current_user }
         format.html { render action: 'new' }
         format.json { render json: @membership.errors, status: :unprocessable_entity }
       end
