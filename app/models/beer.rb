@@ -6,6 +6,7 @@ class Beer < ActiveRecord::Base
   has_many :raters, -> { uniq }, through: :ratings, source: :user
 
   validates :name, presence: true
+  validates :style, presence: true
 
  # def average_rating
   #"#{(ratings.inject(0.0) { |sum ,rating |sum+rating.score }/ratings.count).round(1)}"

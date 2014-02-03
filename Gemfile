@@ -6,6 +6,10 @@ gem 'bcrypt-ruby', '~> 3.1.2'
 gem 'validates_timeliness', '~>3.0'
 # Use sqlite3 as the database for Active Record
 
+group :test do
+  gem 'factory_girl_rails'
+end
+
 group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails', '~> 2.14.1'
