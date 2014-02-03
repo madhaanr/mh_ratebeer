@@ -6,13 +6,11 @@ gem 'bcrypt-ruby', '~> 3.1.2'
 gem 'validates_timeliness', '~>3.0'
 # Use sqlite3 as the database for Active Record
 
-group :test do
-  gem 'factory_girl_rails'
-end
+
 
 group :development, :test do
   gem 'sqlite3'
-  gem 'rspec-rails', '~> 2.14.1'
+
 end
 
 group :production do
@@ -22,6 +20,8 @@ end
 
 #debugger
 gem 'byebug', group: [:development, :test]
+
+
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -47,6 +47,14 @@ gem 'jbuilder', '~> 1.2'
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
+end
+
+group :test do
+  gem 'rspec-rails', '~> 2.14.1'
+  gem 'factory_girl_rails'
+  gem 'capybara'
+  gem 'launchy'
+
 end
 
 # Use ActiveModel has_secure_password
