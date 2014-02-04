@@ -1,10 +1,16 @@
 language: ruby
-
 rvm:
- - 2.0.0
-
+- 2.0.0
 script:
- - bundle exec rake db:migrate --trace
- - RAILS_ENV=test bundle exec rake db:migrate --trace
- - bundle exec rake db:test:prepare
- - bundle exec rspec -fd spec/
+- bundle exec rake db:migrate --trace
+- RAILS_ENV=test bundle exec rake db:migrate --trace
+- bundle exec rake db:test:prepare
+- bundle exec rspec -fd spec/
+deploy:
+  provider: heroku
+  api_key:
+    secure: BdpK/ky7hGPU0hFHf/i04qYw0KmFzlLDwT/M2hiS5gjOoOf8CzM3PRirEK6LqG19WknWE5hqivBQKfzL4zU1JeQcrFUYQzolvgkHSlSqLfLwyslWYd/zrjtfKCrc+dyiLpZUBjcEGO60xGd3FdD+Z9KhmkjpKapYn0rCLa2xKNA=
+  app: glacial-scrubland-9223
+  on:
+    repo: madhaanr/mh_ratebeer
+  run: "rake db:migrate"
