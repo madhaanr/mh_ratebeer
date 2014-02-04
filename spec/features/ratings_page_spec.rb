@@ -41,4 +41,17 @@ describe 'Ratings' do
     expect(page).not_to have_content "iso 3 13 delete"
     expect(page).not_to have_content "Karhu 17 delete"
   end
+
+  it "can be deleted by user" do
+    sign_in(username:"Matti", password:"1QWE")
+    visit user_path(user2)
+
+    page.find('li',:text=>"Karhu 20").click_link('delete')
+    expect(page).to have_content "has made 1 ratings"
+    expect(page).to have_content "average rating 30.0"
+    expect(page).not_to have_content "Karhu 20 delete"
+    expect(page).to have_content "iso 3 30 delete"
+    expect(Rating.exists?(8)).to be(false)
+    #save_and_open_page
+  end
 end
