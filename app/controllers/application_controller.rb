@@ -6,6 +6,8 @@ class ApplicationController < ActionController::Base
 
   helper_method :current_user
 
+
+
   def ensure_that_signed_in
     redirect_to signin_path, notice:'you should be signed in' if current_user.nil?
   end
@@ -13,5 +15,9 @@ class ApplicationController < ActionController::Base
   def current_user
     return nil if session[:user_id].nil?
     User.find(session[:user_id]) rescue nil
+  end
+
+  def verify_is_admin
+    (current_user.nil?) ? redirect_to(beers_path) : (redirect_to(beers_path) unless current_user.admin)
   end
 end

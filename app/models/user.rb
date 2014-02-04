@@ -13,6 +13,7 @@ class User < ActiveRecord::Base
   has_many :memberships, dependent: :destroy
   has_many :beerclubs, through: :memberships
 
+
   def to_s
     "#{username}"
   end
