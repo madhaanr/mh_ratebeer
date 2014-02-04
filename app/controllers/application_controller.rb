@@ -18,6 +18,8 @@ class ApplicationController < ActionController::Base
   end
 
   def verify_is_admin
-    (current_user.nil?) ? redirect_to(beers_path) : (redirect_to(beers_path) unless current_user.admin)
+    return nil if current_user.nil?
+    redirect_to beers_path unless current_user.admin?
+    #(current_user.nil?) ? redirect_to(beers_path) : (redirect_to(beers_path) unless current_user.admin)
   end
 end
