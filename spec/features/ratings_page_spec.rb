@@ -46,6 +46,7 @@ describe 'Ratings' do
     sign_in(username:"Matti", password:"1QWE")
     visit user_path(user2)
 
+    expect(Rating.exists?(8)).to be(true)
     page.find('li',:text=>"Karhu 20").click_link('delete')
     expect(page).to have_content "has made 1 ratings"
     expect(page).to have_content "average rating 30.0"
