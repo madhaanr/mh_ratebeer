@@ -5,7 +5,8 @@
     <% if not @user.ratings.empty? %>
     <p>average rating <%= @user.average_rating %></p>
 <% end %>
-
+<p>favorite beer style is <%= @user.favorite_style %></p>
+<p>favorite brewery is <%= @user.favorite_brewery %></p>
 <p><strong>member of</strong>
 <% @membership.each do |membership| %>
   <%if membership.user_id==@user.id %>
