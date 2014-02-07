@@ -32,11 +32,11 @@ class User < ActiveRecord::Base
   end
 
   def favorite_brewery
-    #@a=0.0
-    #user_breweries.each do |brewery|
-      #if users_breweries_average(brewery)>@a then @brew=brewery and @a=users_breweries_average(brewery) end
-    #end
-    #@brew
+    @a=0.0
+    user_breweries.each do |brewery|
+      if users_breweries_average(brewery)>@a then @brewery_name=brewery and @a=users_breweries_average(brewery) end
+    end
+    @brewery_name
   end
 
   private
@@ -54,7 +54,7 @@ class User < ActiveRecord::Base
   end
 
   def users_breweries_average(brewery)
-    beers.select{ |r| r.brewery.name == brewery }.inject(0.0){|sum,r| r.ratings}
+    ratings.select{|r| r.beer.brewery.name==brewery}.inject(0){|sum,r| sum+r.score}/ratings.select{|r| r.beer.brewery.name==brewery}.count
   end
 
   # esimerkit_tallessa
@@ -63,5 +63,4 @@ class User < ActiveRecord::Base
   #User.first.ratings.group_by{|rating| rating.beer.style}
   #User.first.ratings.map{|r| r.beer.style}.uniq
   #User.first.beers.select{|r| r.brewery.name}.inject(0.0){|sum,r| sum+r.beer.ratings}
-
 end
