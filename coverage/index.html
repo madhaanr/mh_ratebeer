@@ -14,26 +14,26 @@
       <img src="./assets/0.8.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2014-02-07T09:42:10+02:00">2014-02-07T09:42:10+02:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2014-02-07T09:54:11+02:00">2014-02-07T09:54:11+02:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="yellow">83.05%</span></span>
+    (<span class="covered_percent"><span class="yellow">83.28%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.5
+         2.95
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>43</b> files in total.
-    <b>596</b> relevant lines. 
-    <span class="green"><b>495</b> lines covered</span> and
+    <b>604</b> relevant lines. 
+    <span class="green"><b>503</b> lines covered</span> and
     <span class="red"><b>101</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -57,7 +57,7 @@
         <td>11</td>
         <td>9</td>
         <td>2</td>
-        <td>15.8</td>
+        <td>20.4</td>
       </tr>
       
       <tr>
@@ -117,7 +117,7 @@
         <td>11</td>
         <td>9</td>
         <td>2</td>
-        <td>2.8</td>
+        <td>3.5</td>
       </tr>
       
       <tr>
@@ -127,7 +127,7 @@
         <td>35</td>
         <td>21</td>
         <td>14</td>
-        <td>1.2</td>
+        <td>1.4</td>
       </tr>
       
       <tr>
@@ -217,7 +217,7 @@
         <td>10</td>
         <td>9</td>
         <td>1</td>
-        <td>4.5</td>
+        <td>4.7</td>
       </tr>
       
       <tr>
@@ -227,7 +227,7 @@
         <td>4</td>
         <td>4</td>
         <td>0</td>
-        <td>2.8</td>
+        <td>3.8</td>
       </tr>
       
       <tr>
@@ -247,7 +247,7 @@
         <td>6</td>
         <td>6</td>
         <td>0</td>
-        <td>4.0</td>
+        <td>5.3</td>
       </tr>
       
       <tr>
@@ -257,7 +257,7 @@
         <td>33</td>
         <td>32</td>
         <td>1</td>
-        <td>16.5</td>
+        <td>21.6</td>
       </tr>
       
       <tr>
@@ -413,11 +413,11 @@
       <tr>
         <td class="strong"><a href="#8f516cb93c95974df521888e1a0efc2303346e13" class="src_link" title="spec/features/ratings_page_spec.rb">spec/features/ratings_page_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>58</td>
-        <td>46</td>
-        <td>46</td>
+        <td>71</td>
+        <td>54</td>
+        <td>54</td>
         <td>0</td>
-        <td>1.9</td>
+        <td>2.3</td>
       </tr>
       
       <tr>
@@ -433,7 +433,7 @@
       <tr>
         <td class="strong"><a href="#6dc7dbf1d6c17282bbc2561a458534197f5607bd" class="src_link" title="spec/features/users_spec.rb">spec/features/users_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>35</td>
+        <td>36</td>
         <td>22</td>
         <td>22</td>
         <td>0</td>
@@ -477,7 +477,7 @@
         <td>6</td>
         <td>6</td>
         <td>0</td>
-        <td>5.0</td>
+        <td>6.3</td>
       </tr>
       
     </tbody>
@@ -600,14 +600,14 @@
           <code class="ruby">  def current_user</code>
         </li>
       
-        <li class="covered" data-hits="96" data-linenumber="16">
-          <span class="hits">96</span>
+        <li class="covered" data-hits="122" data-linenumber="16">
+          <span class="hits">122</span>
           
           <code class="ruby">    return nil if session[:user_id].nil?</code>
         </li>
       
-        <li class="covered" data-hits="68" data-linenumber="17">
-          <span class="hits">68</span>
+        <li class="covered" data-hits="92" data-linenumber="17">
+          <span class="hits">92</span>
           
           <code class="ruby">    User.find(session[:user_id]) rescue nil</code>
         </li>
@@ -3042,14 +3042,14 @@
           <code class="ruby">  def create</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="6">
-          <span class="hits">7</span>
+        <li class="covered" data-hits="9" data-linenumber="6">
+          <span class="hits">9</span>
           
           <code class="ruby">    user = User.find_by username: params[:username]</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="7">
-          <span class="hits">7</span>
+        <li class="covered" data-hits="9" data-linenumber="7">
+          <span class="hits">9</span>
           
           <code class="ruby">    if user.nil? or not user.authenticate params[:password]</code>
         </li>
@@ -3066,14 +3066,14 @@
           <code class="ruby">    else</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="10">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="8" data-linenumber="10">
+          <span class="hits">8</span>
           
           <code class="ruby">      session[:user_id] = user.id</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="11">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="8" data-linenumber="11">
+          <span class="hits">8</span>
           
           <code class="ruby">      redirect_to user, notice: &quot;Welcome back!&quot;</code>
         </li>
@@ -3228,8 +3228,8 @@
           <code class="ruby">  def show</code>
         </li>
       
-        <li class="covered" data-hits="11" data-linenumber="14">
-          <span class="hits">11</span>
+        <li class="covered" data-hits="15" data-linenumber="14">
+          <span class="hits">15</span>
           
           <code class="ruby">    @membership = Membership.all</code>
         </li>
@@ -3570,8 +3570,8 @@
           <code class="ruby">    def set_user</code>
         </li>
       
-        <li class="covered" data-hits="11" data-linenumber="71">
-          <span class="hits">11</span>
+        <li class="covered" data-hits="15" data-linenumber="71">
+          <span class="hits">15</span>
           
           <code class="ruby">      @user = User.find(params[:id])</code>
         </li>
@@ -4146,8 +4146,8 @@
           <code class="ruby">  def year_newer_than_current</code>
         </li>
       
-        <li class="covered" data-hits="37" data-linenumber="15">
-          <span class="hits">37</span>
+        <li class="covered" data-hits="39" data-linenumber="15">
+          <span class="hits">39</span>
           
           <code class="ruby">    if year &gt; Date.current.year</code>
         </li>
@@ -4308,8 +4308,8 @@
           <code class="ruby">  def average_rating</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="4">
-          <span class="hits">8</span>
+        <li class="covered" data-hits="12" data-linenumber="4">
+          <span class="hits">12</span>
           
           <code class="ruby">    ratings.average :score</code>
         </li>
@@ -4476,8 +4476,8 @@
           <code class="ruby">  def to_s</code>
         </li>
       
-        <li class="covered" data-hits="19" data-linenumber="11">
-          <span class="hits">19</span>
+        <li class="covered" data-hits="27" data-linenumber="11">
+          <span class="hits">27</span>
           
           <code class="ruby">    &quot;#{beer.name} #{score}&quot;</code>
         </li>
@@ -4668,20 +4668,20 @@
           <code class="ruby">  def favorite_style</code>
         </li>
       
-        <li class="covered" data-hits="13" data-linenumber="27">
-          <span class="hits">13</span>
+        <li class="covered" data-hits="17" data-linenumber="27">
+          <span class="hits">17</span>
           
           <code class="ruby">    @a=0.0</code>
         </li>
       
-        <li class="covered" data-hits="13" data-linenumber="28">
-          <span class="hits">13</span>
+        <li class="covered" data-hits="17" data-linenumber="28">
+          <span class="hits">17</span>
           
           <code class="ruby">    rated_styles.each do |style|</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="29">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="14" data-linenumber="29">
+          <span class="hits">14</span>
           
           <code class="ruby">      if users_average_rating(style)&gt;@a then @style_name=style and @a=users_average_rating(style) end</code>
         </li>
@@ -4692,8 +4692,8 @@
           <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="13" data-linenumber="31">
-          <span class="hits">13</span>
+        <li class="covered" data-hits="17" data-linenumber="31">
+          <span class="hits">17</span>
           
           <code class="ruby">    @style_name</code>
         </li>
@@ -4716,20 +4716,20 @@
           <code class="ruby">  def favorite_brewery</code>
         </li>
       
-        <li class="covered" data-hits="12" data-linenumber="35">
-          <span class="hits">12</span>
+        <li class="covered" data-hits="16" data-linenumber="35">
+          <span class="hits">16</span>
           
           <code class="ruby">    @a=0.0</code>
         </li>
       
-        <li class="covered" data-hits="12" data-linenumber="36">
-          <span class="hits">12</span>
+        <li class="covered" data-hits="16" data-linenumber="36">
+          <span class="hits">16</span>
           
           <code class="ruby">    user_breweries.each do |brewery|</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="37">
-          <span class="hits">7</span>
+        <li class="covered" data-hits="11" data-linenumber="37">
+          <span class="hits">11</span>
           
           <code class="ruby">      if users_breweries_average(brewery)&gt;@a then @brewery_name=brewery and @a=users_breweries_average(brewery) end</code>
         </li>
@@ -4740,8 +4740,8 @@
           <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="12" data-linenumber="39">
-          <span class="hits">12</span>
+        <li class="covered" data-hits="16" data-linenumber="39">
+          <span class="hits">16</span>
           
           <code class="ruby">    @brewery_name</code>
         </li>
@@ -4776,8 +4776,8 @@
           <code class="ruby">  def rated_styles</code>
         </li>
       
-        <li class="covered" data-hits="41" data-linenumber="45">
-          <span class="hits">41</span>
+        <li class="covered" data-hits="53" data-linenumber="45">
+          <span class="hits">53</span>
           
           <code class="ruby">    ratings.map{|r| r.beer.style}.uniq</code>
         </li>
@@ -4800,8 +4800,8 @@
           <code class="ruby">  def users_average_rating(style)</code>
         </li>
       
-        <li class="covered" data-hits="237" data-linenumber="49">
-          <span class="hits">237</span>
+        <li class="covered" data-hits="293" data-linenumber="49">
+          <span class="hits">293</span>
           
           <code class="ruby">    ratings.select{ |r| r.beer.style == style }.inject(0.0){ |sum,r| sum+r.score }/ratings.select{|r| r.beer.style==style}.count</code>
         </li>
@@ -4824,8 +4824,8 @@
           <code class="ruby">  def user_breweries</code>
         </li>
       
-        <li class="covered" data-hits="30" data-linenumber="53">
-          <span class="hits">30</span>
+        <li class="covered" data-hits="42" data-linenumber="53">
+          <span class="hits">42</span>
           
           <code class="ruby">    beers.map{ |r| r.brewery.name }.uniq</code>
         </li>
@@ -4848,8 +4848,8 @@
           <code class="ruby">  def users_breweries_average(brewery)</code>
         </li>
       
-        <li class="covered" data-hits="122" data-linenumber="57">
-          <span class="hits">122</span>
+        <li class="covered" data-hits="178" data-linenumber="57">
+          <span class="hits">178</span>
           
           <code class="ruby">    ratings.select{|r| r.beer.brewery.name==brewery}.inject(0){|sum,r| sum+r.score}/ratings.select{|r| r.beer.brewery.name==brewery}.count</code>
         </li>
@@ -7161,8 +7161,8 @@
     <h3>spec/features/ratings_page_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>46</b> relevant lines. 
-      <span class="green"><b>46</b> lines covered</span> and
+      <b>54</b> relevant lines. 
+      <span class="green"><b>54</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -7188,68 +7188,68 @@
           <code class="ruby">describe &#39;Ratings&#39; do</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="4">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="6" data-linenumber="4">
+          <span class="hits">6</span>
           
           <code class="ruby">  let!(:brewery) {FactoryGirl.create :brewery, name:&quot;Koff&quot;}</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="5">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="6" data-linenumber="5">
+          <span class="hits">6</span>
           
           <code class="ruby">  let!(:beer1) {FactoryGirl.create :beer, name:&quot;iso 3&quot;, brewery:brewery}</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="6">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="6" data-linenumber="6">
+          <span class="hits">6</span>
           
           <code class="ruby">  let!(:beer2) {FactoryGirl.create :beer, name:&quot;Karhu&quot;, brewery:brewery}</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="7">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="6" data-linenumber="7">
+          <span class="hits">6</span>
           
           <code class="ruby">  let!(:user) {FactoryGirl.create :user}</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="8">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="6" data-linenumber="8">
+          <span class="hits">6</span>
           
           <code class="ruby">  let!(:rating1) {FactoryGirl.create :rating, score:2, beer:beer1, user:user}</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="9">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="6" data-linenumber="9">
+          <span class="hits">6</span>
           
           <code class="ruby">  let!(:rating2) {FactoryGirl.create :rating, score:20, beer:beer1, user:user}</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="10">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="6" data-linenumber="10">
+          <span class="hits">6</span>
           
           <code class="ruby">  let!(:rating3) {FactoryGirl.create :rating, score:13, beer:beer1, user:user}</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="11">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="6" data-linenumber="11">
+          <span class="hits">6</span>
           
           <code class="ruby">  let!(:rating4) {FactoryGirl.create :rating, score:17, beer:beer2, user:user}</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="12">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="6" data-linenumber="12">
+          <span class="hits">6</span>
           
           <code class="ruby">  let!(:rating5) {FactoryGirl.create :rating, score:19, beer:beer1, user:user}</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="13">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="6" data-linenumber="13">
+          <span class="hits">6</span>
           
           <code class="ruby">  let!(:rating6) {FactoryGirl.create :rating, score:20, beer:beer2, user:user}</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="14">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="6" data-linenumber="14">
+          <span class="hits">6</span>
           
           <code class="ruby">  let!(:rating7) {FactoryGirl.create :rating, score:30, beer:beer1, user:user}</code>
         </li>
@@ -7260,20 +7260,20 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="16">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="6" data-linenumber="16">
+          <span class="hits">6</span>
           
           <code class="ruby">  let!(:user2) {FactoryGirl.create :user, username:&quot;Matti&quot;,password:&quot;1QWE&quot;,password_confirmation:&quot;1QWE&quot;}</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="17">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="6" data-linenumber="17">
+          <span class="hits">6</span>
           
           <code class="ruby">  let!(:rating8) {FactoryGirl.create :rating, score:20, beer:beer2, user:user2}</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="18">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="6" data-linenumber="18">
+          <span class="hits">6</span>
           
           <code class="ruby">  let!(:rating9) {FactoryGirl.create :rating, score:30, beer:beer1, user:user2}</code>
         </li>
@@ -7513,6 +7513,84 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="58">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="59">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  it &quot;done by user decide their favorite beer style&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="60">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    sign_in(username:&quot;Matti&quot;, password:&quot;1QWE&quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="61">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    visit user_path(user2)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="62">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(page).to have_content &quot;favorite beer style is Lager&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="63">
+          
+          
+          <code class="ruby">    #save_and_open_page</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="64">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="65">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="66">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  it &quot;done by user decide their favorite brewery style&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="67">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    sign_in(username:&quot;Matti&quot;, password:&quot;1QWE&quot;)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="68">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    visit user_path(user2)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="69">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(page).to have_content &quot;favorite brewery is Koff&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="70">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="71">
           
           
           <code class="ruby">end</code>
@@ -7953,10 +8031,16 @@
         <li class="never" data-hits="" data-linenumber="34">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="35">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="36">
           
           
           <code class="ruby">end</code>
@@ -9174,26 +9258,26 @@
           <code class="ruby">  def sign_in(credentials)</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="3">
-          <span class="hits">7</span>
+        <li class="covered" data-hits="9" data-linenumber="3">
+          <span class="hits">9</span>
           
           <code class="ruby">    visit signin_path</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="4">
-          <span class="hits">7</span>
+        <li class="covered" data-hits="9" data-linenumber="4">
+          <span class="hits">9</span>
           
           <code class="ruby">    fill_in(&#39;username&#39;,with:credentials[:username])</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="5">
-          <span class="hits">7</span>
+        <li class="covered" data-hits="9" data-linenumber="5">
+          <span class="hits">9</span>
           
           <code class="ruby">    fill_in(&#39;password&#39;,with:credentials[:password])</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="6">
-          <span class="hits">7</span>
+        <li class="covered" data-hits="9" data-linenumber="6">
+          <span class="hits">9</span>
           
           <code class="ruby">    click_button(&#39;Log in&#39;)</code>
         </li>

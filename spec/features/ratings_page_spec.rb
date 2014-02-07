@@ -55,4 +55,17 @@ describe 'Ratings' do
     expect(Rating.exists?(8)).to be(false)
     #save_and_open_page
   end
+
+  it "done by user decide their favorite beer style" do
+    sign_in(username:"Matti", password:"1QWE")
+    visit user_path(user2)
+    expect(page).to have_content "favorite beer style is Lager"
+    #save_and_open_page
+  end
+
+  it "done by user decide their favorite brewery style" do
+    sign_in(username:"Matti", password:"1QWE")
+    visit user_path(user2)
+    expect(page).to have_content "favorite brewery is Koff"
+  end
 end
