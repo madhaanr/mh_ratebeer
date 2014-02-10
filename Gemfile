@@ -21,7 +21,7 @@ end
 #debugger
 gem 'byebug', group: [:development, :test]
 
-
+gem 'httparty'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
