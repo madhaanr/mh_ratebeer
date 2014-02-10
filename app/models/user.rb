@@ -24,6 +24,7 @@ class User < ActiveRecord::Base
   end
 
   def favorite_style
+    return nil if ratings.empty?
     @a=0.0
     rated_styles.each do |style|
       if users_average_rating(style)>@a then @style_name=style and @a=users_average_rating(style) end
@@ -32,6 +33,7 @@ class User < ActiveRecord::Base
   end
 
   def favorite_brewery
+    return nil if ratings.empty?
     @a=0.0
     user_breweries.each do |brewery|
       if users_breweries_average(brewery)>@a then @brewery_name=brewery and @a=users_breweries_average(brewery) end
@@ -46,7 +48,8 @@ class User < ActiveRecord::Base
   end
 
   def users_average_rating(style)
-    ratings.select{ |r| r.beer.style == style }.inject(0.0){ |sum,r| sum+r.score }/ratings.select{|r| r.beer.style==style}.count
+    styles_ratings = ratings.select{ |r| r.beer.style == style }
+    styles_ratings.inject(0.0){ |sum,r| sum+r.score }/styles_ratings.count
   end
 
   def user_breweries
@@ -54,7 +57,8 @@ class User < ActiveRecord::Base
   end
 
   def users_breweries_average(brewery)
-    ratings.select{|r| r.beer.brewery.name==brewery}.inject(0){|sum,r| sum+r.score}/ratings.select{|r| r.beer.brewery.name==brewery}.count
+    brewerys_ratings = ratings.select{|r| r.beer.brewery.name==brewery}
+    brewerys_ratings.inject(0){|sum,r| sum+r.score}/brewerys_ratings.count
   end
 
   # esimerkit_tallessa
