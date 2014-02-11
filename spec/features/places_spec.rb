@@ -36,6 +36,6 @@ describe "Places" do
 
     expect(page).to_not have_content "Pullman Bar"
     expect(page).to have_content "No locations in joensuu"
-    save_and_open_page
+    #save_and_open_page
   end
 end
