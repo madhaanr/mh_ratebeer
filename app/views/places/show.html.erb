@@ -1,0 +1,8 @@
+<% @citys_pubs.each do |pub| %>
+    <% if pub.id==params[:id] %>
+        <h1><%= pub.name %></h1>
+        <p><%= pub.street %> <br></p>
+        <p><%= pub.zip %> <%= pub.city %></p>
+        <iframe src="<%= pub.blogmap %>"></iframe>
+    <% end %>
+<% end %>

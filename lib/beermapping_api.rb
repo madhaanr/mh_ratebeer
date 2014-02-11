@@ -6,9 +6,9 @@ class BeermappingApi
   end
 
   def self.fetch_places_in(city)
-    #api_key = "15578b7be01286ed23c388e294580aa6"
+
     url = "http://stark-oasis-9187.herokuapp.com/api/"
-    #url = "http://beermapping.com/webservice/loccity/#{api_key}/"
+    #url = "http://beermapping.com/webservice/loccity/#{key}/"
 
     response = HTTParty.get "#{url}#{ERB::Util.url_encode(city)}"
     places = response.parsed_response["bmp_locations"]["location"]
@@ -21,4 +21,13 @@ class BeermappingApi
     end
   end
 
+  def self.fetch_pubs(city)
+    Rails.cache.read(city)
+  end
+
+  def self.key
+    Settings.beermapping_apikey
+  end
+
 end
+#api_key = "15578b7be01286ed23c388e294580aa6"

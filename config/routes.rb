@@ -10,6 +10,8 @@ Ratebeer::Application.routes.draw do
 
   resources :breweries
 
+
+
   root 'breweries#index'
 
   #get 'kaikki_bisset', to:'beers#index'
@@ -26,7 +28,10 @@ Ratebeer::Application.routes.draw do
 
   delete 'signout', to: 'sessions#destroy'
 
-  get 'places', to: 'places#index'
+  #get 'places/:id', to_'places#show'
+
+  resources :places, only:[:index,:show]
+  #get 'places', to: 'places#index'
   post 'places', to: 'places#search'
 
   # The priority is based upon order of creation: first created -> highest priority.
