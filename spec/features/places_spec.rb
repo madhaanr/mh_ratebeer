@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe "Places" do
+
   it "if one is returned by the API, it is shown at the page" do
     BeermappingApi.stub(:places_in).with("kumpula").and_return(
         [ Place.new(:name => "Oljenkorsi") ]
@@ -8,7 +9,8 @@ describe "Places" do
 
     visit places_path
     fill_in('city', with: 'kumpula')
-    click_button "Search"
+    #save_and_open_page
+    click_button 'Search'
 
     expect(page).to have_content "Oljenkorsi"
   end
@@ -19,13 +21,14 @@ describe "Places" do
     )
     visit places_path
     fill_in('city', with: 'helsinki')
-    click_button "Search"
+    click_button 'Search'
 
     expect(page).to have_content "Pullman Bar"
     expect(page).to have_content "Belge"
     expect(page).to have_content "St. Urho's Pub"
     #save_and_open_page
   end
+
   it "if no places are found notice is posted" do
     BeermappingApi.stub(:places_in).with("joensuu").and_return(
         []

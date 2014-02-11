@@ -12,7 +12,9 @@ class BeerclubsController < ApplicationController
   # GET /beerclubs/1
   # GET /beerclubs/1.json
   def show
-    @membership = Membership.all
+    @memberships = Membership.all
+    @beerclub = Beerclub.find(params[:id])
+    @membership = Membership.new
   end
 
   # GET /beerclubs/new

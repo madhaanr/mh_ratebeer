@@ -16,13 +16,19 @@
 </p>
 <p><strong>Members:</strong></p>
 <ul>
-  <% @membership.each do |membership| %>
+  <% @memberships.each do |membership| %>
      <%if membership.beerclub_id==@beerclub.id %>
         <li><%= link_to membership.user, user_path(membership.user_id) %></li>
      <% end %>
   <% end %>
 </ul>
 
+   <h4>join a club</h4>
+   <%= form_for(@membership) do |f| %>
+        <%= f.hidden_field :id %>
+        <%= f.submit %>
+   <% end %>
 
-<%= link_to 'Edit', edit_beerclub_path(@beerclub) %> |
+<%= link_to 'Edit', edit_beerclub_path(@beerclub) %>
+
 <%= link_to 'Back', beerclubs_path %>

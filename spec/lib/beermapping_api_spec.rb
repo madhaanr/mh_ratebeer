@@ -1,6 +1,8 @@
 require 'spec_helper'
 
 describe 'BeermappingApi' do
+  before :all do Rails.cache.clear end
+
   it "When HTTP GET returns one entry, it is parsed and returned" do
 
     canned_answer = <<-END_OF_STRING
