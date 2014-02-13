@@ -1,9 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @beerclub.name %>
-</p>
+<h1><%= @beerclub.name %></h1>
 
 <p>
   <strong>Founded:</strong>
@@ -22,13 +19,13 @@
      <% end %>
   <% end %>
 </ul>
-
-   <h4>join a club</h4>
+<% if current_user and @clubs_to_join.include?(@beerclub) %>
    <%= form_for(@membership) do |f| %>
-        <%= f.hidden_field :id %>
-        <%= f.submit %>
+        <%= f.hidden_field :beerclub_id, :value => @beerclub.id %>
+        <%= f.submit value: "join the club " %>
    <% end %>
+<% end %>
 
-<%= link_to 'Edit', edit_beerclub_path(@beerclub) %>
+<%= link_to 'Edit', edit_beerclub_path(@beerclub) %> <br>
+<%= link_to 'Destroy the club', @beerclub, method: :delete, data: { confirm: 'Are you sure?' } %>
 
-<%= link_to 'Back', beerclubs_path %>

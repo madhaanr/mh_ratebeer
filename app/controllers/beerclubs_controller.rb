@@ -13,8 +13,8 @@ class BeerclubsController < ApplicationController
   # GET /beerclubs/1.json
   def show
     @memberships = Membership.all
-    @beerclub = Beerclub.find(params[:id])
     @membership = Membership.new
+    @clubs_to_join = Beerclub.all.reject{ |b| b.members.include? current_user }
   end
 
   # GET /beerclubs/new
@@ -76,4 +76,5 @@ class BeerclubsController < ApplicationController
     def beerclub_params
       params.require(:beerclub).permit(:name, :founded, :city)
     end
+
 end

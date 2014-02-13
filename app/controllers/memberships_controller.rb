@@ -16,21 +16,6 @@ class MembershipsController < ApplicationController
   def new
     @membership = Membership.new
     @clubs = Beerclub.all.reject{ |b| b.members.include? current_user }
-    #@beerclubs = Beerclub.all
-=begin
-    @memberships = Membership.all
-    @beerc=Beerclub.all
-    @beerclubs=[]
-    @memberships.each do |m|
-      @beerc.each do |b|
-        if m.user_id==current_user.id and m.beerclub_id==b.id
-          @beerclubs
-        else
-          @beerclubs << b
-        end
-      end
-    end
-=end
   end
 
   # GET /memberships/1/edit
@@ -47,7 +32,8 @@ class MembershipsController < ApplicationController
 
     respond_to do |format|
       if @membership.save
-        format.html { redirect_to @membership, notice: 'Membership was successfully created.' }
+        #byebug
+        format.html { redirect_to beerclub_path(params[:membership][:beerclub_id]), notice:  "#{current_user}, welcome to the club!" }
         format.json { render action: 'show', status: :created, location: @membership }
       else
         @clubs = Beerclub.all.reject{ |b| b.members.include? current_user }
