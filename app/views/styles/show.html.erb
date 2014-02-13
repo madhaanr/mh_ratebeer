@@ -1,0 +1,13 @@
+<h1><%=@style%></h1>
+
+<p><%= @style.description %></p>
+
+<ul>
+  <% @beers.each do |f| %>
+  <li><%= link_to f.name,f %> by <%= link_to f.brewery.name, f.brewery %></li>
+  <% end %>
+</ul>
+
+<% if current_user %>
+    <%= link_to 'Edit', edit_style_path(@style) %>
+<% end %>
