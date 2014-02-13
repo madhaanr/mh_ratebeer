@@ -32,7 +32,8 @@ Ratebeer::Application.routes.draw do
   #get 'places', to: 'places#index'
   post 'places', to: 'places#search'
 
-  resources :styles, only:[:index, :show,:update,:edit,:destroy]
+  resources :styles
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

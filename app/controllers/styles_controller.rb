@@ -24,6 +24,20 @@ class StylesController < ApplicationController
     redirect_to style_path(@style)
   end
 =end
+  def create
+
+    @style = Style.new(style_params)
+
+    respond_to do |format|
+      if @style.save
+        format.html { redirect_to styles_path, notice: 'Style was successfully created.' }
+        format.json { render action: 'show', status: :created, location: @style }
+      else
+        format.html { render action: 'new' }
+        format.json { render json: @style.errors, status: :unprocessable_entity }
+      end
+    end
+  end
 
   def update
     respond_to do |format|
