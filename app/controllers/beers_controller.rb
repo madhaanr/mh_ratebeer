@@ -49,6 +49,7 @@ class BeersController < ApplicationController
   # PATCH/PUT /beers/1.json
   def update
     respond_to do |format|
+
       if @beer.update(beer_params)
         format.html { redirect_to @beer, notice: 'Beer was successfully updated.' }
         format.json { head :no_content }
