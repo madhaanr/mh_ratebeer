@@ -74,10 +74,12 @@ describe User do
   describe "has favorite style" do
     let!(:brewery) {FactoryGirl.create :brewery, name:"Koff"}
     let!(:brewery2) {FactoryGirl.create :brewery, name:"Malmgard"}
-    let!(:beer1) {FactoryGirl.create :beer, name:"iso 3", brewery:brewery}
-    let!(:beer2) {FactoryGirl.create :beer2, name:"Karhu", brewery:brewery}
-    let!(:beer3) {FactoryGirl.create :beer, name:"iso 3", brewery:brewery2}
-    let!(:beer4) {FactoryGirl.create :beer2, name:"Karhu", brewery:brewery2}
+    let!(:style) {FactoryGirl.create :style}
+    let!(:style2) {FactoryGirl.create :style, name:"Lager"}
+    let!(:beer1) {FactoryGirl.create :beer, name:"iso 3", brewery:brewery, style:style}
+    let!(:beer2) {FactoryGirl.create :beer2, name:"Karhu", brewery:brewery, style:style2}
+    let!(:beer3) {FactoryGirl.create :beer, name:"iso 3", brewery:brewery2, style:style}
+    let!(:beer4) {FactoryGirl.create :beer2, name:"Karhu", brewery:brewery2, style:style2}
     let!(:user){FactoryGirl.create(:user)}
     let!(:rating1) {FactoryGirl.create :rating, score:2, beer:beer1, user:user}
     let!(:rating2) {FactoryGirl.create :rating, score:20, beer:beer1, user:user}
@@ -95,12 +97,13 @@ describe User do
 
     it "and should return style Lager" do
       create_beers_with_ratings(50,50,user)
-      expect(user.favorite_style).to eq("Lager")
+      
+      expect(user.favorite_style).to eq(style:style)
     end
 
 
     it "should return style with highest average rating" do
-      expect(user.favorite_style).to eq("Weizen")
+      expect(user.favorite_style).to eq(style:style2)
     end
   end
 
