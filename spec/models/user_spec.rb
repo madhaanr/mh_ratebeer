@@ -97,13 +97,14 @@ describe User do
 
     it "and should return style Lager" do
       create_beers_with_ratings(50,50,user)
-      
-      expect(user.favorite_style).to eq(style:style)
+
+
+      expect(user.favorite_style.name).to eq("Weizen")
     end
 
 
     it "should return style with highest average rating" do
-      expect(user.favorite_style).to eq(style:style2)
+      expect(user.favorite_style.name).to eq("Lager")
     end
   end
 

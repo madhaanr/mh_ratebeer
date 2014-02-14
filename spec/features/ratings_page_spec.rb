@@ -2,8 +2,10 @@ require 'spec_helper'
 
 describe 'Ratings' do
   let!(:brewery) {FactoryGirl.create :brewery, name:"Koff"}
-  let!(:beer1) {FactoryGirl.create :beer, name:"iso 3", brewery:brewery}
-  let!(:beer2) {FactoryGirl.create :beer, name:"Karhu", brewery:brewery}
+  let!(:style) {FactoryGirl.create :style}
+  let!(:style2) {FactoryGirl.create :style, name:"Lager"}
+  let!(:beer1) {FactoryGirl.create :beer, name:"iso 3", brewery:brewery,style:style}
+  let!(:beer2) {FactoryGirl.create :beer, name:"Karhu", brewery:brewery,style:style}
   let!(:user) {FactoryGirl.create :user}
   let!(:rating1) {FactoryGirl.create :rating, score:2, beer:beer1, user:user}
   let!(:rating2) {FactoryGirl.create :rating, score:20, beer:beer1, user:user}
@@ -59,7 +61,8 @@ describe 'Ratings' do
   it "done by user decide their favorite beer style" do
     sign_in(username:"Matti", password:"1QWE")
     visit user_path(user2)
-    expect(page).to have_content "favorite beer style is Lager"
+    #save_and_open_page
+    expect(page).to have_content "favorite beer style is Weizen"
     #save_and_open_page
   end
 
