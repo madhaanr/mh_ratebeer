@@ -14,3 +14,7 @@ deploy:
   on:
     repo: madhaanr/mh_ratebeer
   run: "rake db:migrate"
+addons:
+  sauce_connect:
+    username: "mhaanran"
+    access_key: "c2ecd9e6-c402-4d40-8c1c-ca64e4fa5749"

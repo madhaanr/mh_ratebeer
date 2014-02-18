@@ -2,16 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f19799f3-00a2-4d37-904d-7bd3f4e4fd0a" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/controllers/styles_controller_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/fixtures/styles.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/helpers/styles_helper_test.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/models/style_test.rb" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coverage/.last_run.json" afterPath="$PROJECT_DIR$/coverage/.last_run.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coverage/.resultset.json" afterPath="$PROJECT_DIR$/coverage/.resultset.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/beers_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/beers_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/breweries_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/breweries_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/beers/index.html.erb" afterPath="$PROJECT_DIR$/app/views/beers/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/breweries/index.html.erb" afterPath="$PROJECT_DIR$/app/views/breweries/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/beers/index.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/beers/index.json.jbuilder" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/breweries/index.json.jbuilder" afterPath="$PROJECT_DIR$/app/views/breweries/index.json.jbuilder" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coverage/index.html" afterPath="$PROJECT_DIR$/coverage/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ratebeer.iws" />
@@ -39,15 +38,26 @@
         <entry file="file://$PROJECT_DIR$/config/routes.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state line="40" column="40" selection-start="844" selection-end="844" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1545">
+              <folding>
+                <marker date="1392733908745" expanded="true" signature="180:333" placeholder="#..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="list.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/breweries/list.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="28" column="19" selection-start="830" selection-end="830" vertical-scroll-proportion="-17.5" vertical-offset="0" max-vertical-offset="555">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="list.html.erb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/breweries/list.html.erb">
+      <file leaf-file-name="beerlist_spec.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/spec/features/beerlist_spec.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="19" selection-start="830" selection-end="830" vertical-scroll-proportion="0.45901638" vertical-offset="0" max-vertical-offset="915">
+            <state line="50" column="4" selection-start="1564" selection-end="1564" vertical-scroll-proportion="0.798722" vertical-offset="0" max-vertical-offset="939">
               <folding />
             </state>
           </provider>
@@ -57,24 +67,6 @@
         <entry file="file://$PROJECT_DIR$/app/views/beers/nglist.html.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state line="28" column="68" selection-start="824" selection-end="824" vertical-scroll-proportion="-17.5" vertical-offset="0" max-vertical-offset="600">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.json.jbuilder" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/breweries/index.json.jbuilder">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="36" selection-start="132" selection-end="132" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.json.jbuilder" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/beers/index.json.jbuilder">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="5" selection-start="117" selection-end="170" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
               <folding />
             </state>
           </provider>
@@ -93,7 +85,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/users/index.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/places_controller.rb" />
         <option value="$PROJECT_DIR$/lib/beermapping_api.rb" />
         <option value="$PROJECT_DIR$/app/models/place.rb" />
@@ -131,7 +122,6 @@
         <option value="$PROJECT_DIR$/spec/features/beers_page_spec.rb" />
         <option value="$PROJECT_DIR$/app/views/beers/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/breweries/index.html.erb" />
-        <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
         <option value="$PROJECT_DIR$/app/views/ratings/index.json.builder" />
         <option value="$PROJECT_DIR$/app/views/ratings/index.json.jbuilder" />
@@ -144,6 +134,8 @@
         <option value="$PROJECT_DIR$/app/views/beers/index.json.jbuilder" />
         <option value="$PROJECT_DIR$/app/views/breweries/index.json.jbuilder" />
         <option value="$PROJECT_DIR$/app/views/breweries/list.html.erb" />
+        <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/spec/features/beerlist_spec.rb" />
       </list>
     </option>
   </component>
@@ -194,6 +186,38 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="ratebeer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ratebeer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ratebeer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spec" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ratebeer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ratebeer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spec" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="features" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -579,11 +603,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/users/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="41" selection-start="916" selection-end="972" vertical-scroll-proportion="0.48876405" vertical-offset="0" max-vertical-offset="890" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/beers/edit.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="914" />
@@ -772,13 +791,6 @@
         <state line="17" column="0" selection-start="694" selection-end="694" vertical-scroll-proportion="0.2715655" vertical-offset="0" max-vertical-offset="939" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="23" selection-start="475" selection-end="475" vertical-scroll-proportion="0.4313099" vertical-offset="0" max-vertical-offset="1215">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/beerclubs_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="32" selection-start="451" selection-end="451" vertical-scroll-proportion="0.015974442" vertical-offset="210" max-vertical-offset="1290">
@@ -817,7 +829,9 @@
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="40" column="40" selection-start="844" selection-end="844" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1545">
-          <folding />
+          <folding>
+            <marker date="1392733908745" expanded="true" signature="180:333" placeholder="#..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -842,9 +856,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="0" selection-start="1217" selection-end="1217" vertical-scroll-proportion="0.6291028" vertical-offset="235" max-vertical-offset="1245">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/breweries/list.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="19" selection-start="830" selection-end="830" vertical-scroll-proportion="-17.5" vertical-offset="0" max-vertical-offset="555">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/breweries/index.json.jbuilder">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="36" selection-start="132" selection-end="132" vertical-scroll-proportion="0.049234137" vertical-offset="0" max-vertical-offset="914">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/beers/index.json.jbuilder">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="5" selection-start="117" selection-end="170" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
+        <state line="9" column="0" selection-start="175" selection-end="175" vertical-scroll-proportion="0.14376996" vertical-offset="0" max-vertical-offset="939">
           <folding />
         </state>
       </provider>
@@ -856,16 +891,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/breweries/index.json.jbuilder">
+    <entry file="file://$PROJECT_DIR$/spec/features/beerlist_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="36" selection-start="132" selection-end="132" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/breweries/list.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="19" selection-start="830" selection-end="830" vertical-scroll-proportion="0.45901638" vertical-offset="0" max-vertical-offset="915">
+        <state line="50" column="4" selection-start="1564" selection-end="1564" vertical-scroll-proportion="0.798722" vertical-offset="0" max-vertical-offset="939">
           <folding />
         </state>
       </provider>
