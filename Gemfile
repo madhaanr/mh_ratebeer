@@ -25,6 +25,8 @@ gem 'httparty'
 
 gem "rails-settings-cached", "0.3.1"
 
+gem 'jquery-turbolinks'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 

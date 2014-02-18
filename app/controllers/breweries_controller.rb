@@ -1,6 +1,6 @@
 class BreweriesController < ApplicationController
   before_action :set_brewery, only: [:show, :edit, :update, :destroy]
-  before_action :ensure_that_signed_in, except: [:index,:show]
+  before_action :ensure_that_signed_in, except: [:index,:show,:list]
   before_action :verify_is_admin, only:[:destroy]
 
   # GET /breweries
@@ -8,7 +8,12 @@ class BreweriesController < ApplicationController
   def index
     @breweries = Brewery.all
 
-    #render :panimot
+    order = params[:order] || 'name'
+
+    case order
+      when 'name' then @breweries.sort_by!{ |b| b.name }
+      when 'year' then @breweries.sort_by!{ |b| b.year }
+    end
   end
 
   # GET /breweries/1
@@ -23,6 +28,9 @@ class BreweriesController < ApplicationController
 
   # GET /breweries/1/edit
   def edit
+  end
+
+  def list
   end
 
   # POST /breweries
