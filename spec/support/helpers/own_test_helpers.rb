@@ -5,4 +5,5 @@ module OwnTestHelper
     fill_in('password',with:credentials[:password])
     click_button('Log in')
   end
+
 end
