@@ -1,6 +1,12 @@
 language: ruby
 rvm:
 - 2.0.0
+before_script:
+  - "export DISPLAY=:99.0"
+  - "sh -e /etc/init.d/xvfb start"
+  - sleep 3 # give xvfb some time to start
+  - rackup  # start a Web server
+  - sleep 3 # give Web server some time to bind to sockets, etc
 script:
 - bundle exec rake db:migrate --trace
 - RAILS_ENV=test bundle exec rake db:migrate --trace
@@ -14,15 +20,7 @@ deploy:
   on:
     repo: madhaanr/mh_ratebeer
   run: "rake db:migrate"
-
 addons:
   sauce_connect:
     username: "mhaanran"
     access_key: "c2ecd9e6-c402-4d40-8c1c-ca64e4fa5749"
-
- before_script:
-  - "export DISPLAY=:99.0"
-  - "sh -e /etc/init.d/xvfb start"
-  - sleep 3 # give xvfb some time to start
-  - rackup  # start a Web server
-  - sleep 3 # give Web server some time to bind to sockets, etc
