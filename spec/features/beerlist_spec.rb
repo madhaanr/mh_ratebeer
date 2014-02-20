@@ -48,6 +48,6 @@ describe "Beerlist page" do
   end
 
   it "shows beers in order by brewery", js:true do
-    
+
   end
 end
