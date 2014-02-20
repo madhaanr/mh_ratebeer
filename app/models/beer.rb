@@ -10,6 +10,10 @@ class Beer < ActiveRecord::Base
   validates :name, presence: true
   validates :style, presence: true
 
+  def self.top(n)
+    Beer.all.sort_by{ |b| -(b.average_rating||0) }.take(n)
+  end
+
  # def average_rating
   #"#{(ratings.inject(0.0) { |sum ,rating |sum+rating.score }/ratings.count).round(1)}"
   #"#{ratings.average("score").round(1)}"

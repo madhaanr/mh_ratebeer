@@ -13,6 +13,9 @@ class User < ActiveRecord::Base
   has_many :memberships, dependent: :destroy
   has_many :beerclubs, through: :memberships
 
+  def self.top(n)
+    User.all.sort_by{ |b| -(b.ratings.count||0) }.take(n)
+  end
 
   def to_s
     "#{username}"
